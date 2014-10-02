@@ -9,7 +9,7 @@ Check the [releases](https://github.com/droboports/python-pyopenssl/releases) pa
 
 ## How to compile
 
-First make sure that you have a working cross-compiling VM. See http://www.droboports.com/setting-up-a-vm for a step-by-step description.
+First make sure that you have a [working cross-compiling VM](https://github.com/droboports/droboports/wiki/Setting-up-a-VM).
 
 Log in the VM, pick a temporary folder (e.g., `~/build`), and then do:
 

@@ -49,7 +49,7 @@ local URL="https://pypi.python.org/packages/source/p/pyOpenSSL/${FILE}"
 local XPYTHON=~/xtools/python2/${DROBO}
 
 _download_tgz "${FILE}" "${URL}" "${FOLDER}"
-pushd target/"${FOLDER}"
+pushd "target/${FOLDER}"
 sed -i -e "s|from distutils.core import Extension, setup|from setuptools import setup\nfrom distutils.core import Extension|g" setup.py
 _PYTHON_HOST_PLATFORM="linux-armv7l" PYTHONPATH="${XPYTHON}" "${XPYTHON}/bin/python" setup.py build_ext --include-dirs="${XPYTHON}/include-${DROBO}" --library-dirs="${XPYTHON}/lib-${DROBO}" --force build --force bdist_egg --dist-dir ../..
 popd
